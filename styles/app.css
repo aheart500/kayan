@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  font-family: "Cairo", sans-serif !important;
+}
+.tag {
+  padding: 5px;
+  border-radius: 5px;
+}
+.processing {
+  background-color: lightgray;
+}
+.processed {
+  background-color: lightslategray;
+}
+.waiting {
+  background-color: mediumslateblue;
+}
+.finished {
+  background-color: mediumspringgreen;
+}
+.cancelled {
+  background-color: mediumvioletred;
+}
+.delievered {
+  background-color: tomato;
+}
+.active {
+  background-color: orange;
+}
+/* div.MuiToolbar-root {
+  background-color: antiquewhite;
+} */
+.toolbar-custom {
+  background-color: antiquewhite;
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 1rem 0;
+}
+
+.little-icons {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: auto;
+}
+.addOrder {
+  margin-left: 1rem !important;
+}
+.order-slider {
+  width: 60% !important;
+  margin-right: 2rem;
+}
+
+.shipment-price {
+  margin-right: 1rem;
+}
+@media (max-width: 800px) {
+  .toolbar-custom {
+    flex-direction: column;
+    align-items: center;
+  }
+  .addOrder {
+    margin-left: 0 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .little-icons {
+    margin-right: unset;
+  }
+  .order-slider {
+    width: 100% !important;
+    align-self: stretch;
+    margin-right: unset;
+  }
+  .shipment-price {
+    margin-right: unset;
+  }
+}
+.track-container {
+  width: 70%;
+  margin: 2rem auto;
+  direction: rtl;
+  font-family: "Cairo";
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+.track-row {
+  display: flex;
+  flex-direction: row;
+
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  align-items: center;
+}
+.cards-container {
+  display: flex !important;
+  flex-direction: row !important;
+  direction: rtl;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-family: "Cairo";
+  page-break-inside: avoid;
+  width: 100% !important;
+}
+.card-logo {
+  font-family: "Cinzel Decorative", cursive;
+  line-height: 0.8;
+}
+.my-link {
+  text-align: center;
+  font-size: 0.8rem;
+}
+.print-card {
+  width: 540px;
+  height: 391px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 2px !important;
+  padding: 10px;
+
+  float: right;
+  page-break-inside: avoid;
+}
+.card-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.qr-code {
+  width: 60px;
+  height: 60px;
+  border: 1px solid;
+
+  margin-bottom: 5px;
+}
+.card-row {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.card-right {
+  width: 20%;
+  margin-left: 0.5rem;
+}
+
+.printTable {
+  display: none;
+}
+.printCards {
+  display: none !important;
+}
+
+@media print {
+  @page {
+    size: auto; /* auto is the initial value */
+    margin: 0 !important; /* this affects the margin in the printer settings */
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+
+  html {
+    background-color: #ffffff;
+    margin: 0 !important; /* this affects the margin in the printer settings */
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+
+  body {
+    border: solid 1px black;
+    margin: 0 !important; /* this affects the margin in the printer settings */
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+  .printTable {
+    display: block !important;
+  }
+  .printCards {
+    display: block !important;
+  }
+}
+.track-page {
+  color: white;
+}
+.track-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+.track-page-back {
+  padding: 2rem auto;
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -o-filter: blur(20px);
+  -ms-filter: blur(20px);
+  filter: blur(20px);
+  width: 100%;
+  z-index: -1;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: url("../public/back1.jpg") no-repeat center/cover;
+}
+.track-page-back-logo {
+  background: url("../public/kayan.jpeg") no-repeat center/cover;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  height: 700px;
+  background-repeat: no-repeat !important;
+  background-size: 100% !important;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  height: 100vh;
+}
+.text-field {
+  background-color: white;
+}
+@media (max-width: 992px) {
+  .track-container {
+    width: 95%;
+  }
+  .track-form {
+    width: 80%;
+  }
+  .track-page-back {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+  }
+  .track-page-back-logo {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+  }
+}
+@media (max-width: 500px) {
+  .track-form {
+    width: 95%;
+  }
+  .track-container {
+    width: 100%;
+  }
+  .track-row {
+    flex-direction: column;
+  }
+  .right {
+    width: 100%;
+  }
+}
