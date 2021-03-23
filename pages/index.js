@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="app-container">
       <Head>
-        <title>Dolapk</title>
+        <title>Kayan</title>
       </Head>
       <div
         style={{

@@ -13,7 +13,7 @@ const useStyles = makeStyles({
 const intialState = { name: "", username: "", password: "" };
 const AdminMain = () => {
   const { userState, Logout } = useContext(UserContext);
-  const isAdmin = userState.name === "Omar Mohamed";
+  const isAdmin = ["Omar Mohamed", "Mohamed ElSayed"].includes(userState.name);
   const muiClasses = useStyles();
   const [loadAdmins, { loading, data, refetch }] = useLazyQuery(GET_ADMINS);
 

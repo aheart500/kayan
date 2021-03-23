@@ -38,13 +38,7 @@ const marks = [
 const valueLabelFormat = (value) => {
   return value;
 };
-const Order = ({
-  orderId,
-  editOrder,
-  backToList,
-  setSelectedOrderId,
-  addOrder,
-}) => {
+const Order = ({ orderId, editOrder, backToList, setSelectedOrderId, addOrder }) => {
   const { data, error, loading, refetch } = useQuery(GET_ORDER, {
     variables: { id: orderId },
   });
@@ -110,7 +104,7 @@ const Order = ({
         : formedID.length === 1
         ? `000${formedID}`
         : formedID;
-    formedID = `DP${formedID}`;
+    formedID = `KY${formedID}`;
 
     const createdAt = new Date(parseInt(order.created_at))
       .toString()
@@ -185,9 +179,9 @@ const Order = ({
         </div>
         <div className={styles.row}>
           <div className={styles.right}>السعر</div>
-          <div dir="ltr">{`${order.price.order} EGP + ${
-            order.price.shipment || "0"
-          } EGP = ${order.price.order + order.price.shipment} EGP`}</div>
+          <div dir="ltr">{`${order.price.order} EGP + ${order.price.shipment || "0"} EGP = ${
+            order.price.order + order.price.shipment
+          } EGP`}</div>
         </div>
 
         <div className={styles.row}>
@@ -257,9 +251,7 @@ const Order = ({
         </div>
         <div className={styles.row}>
           <div className={styles.right}>تاريخ التعديل</div>
-          <div style={{ direction: "ltr" }}>
-            {order.updated_by ? updatedAt : ""}
-          </div>
+          <div style={{ direction: "ltr" }}>{order.updated_by ? updatedAt : ""}</div>
         </div>
         <div
           style={{
