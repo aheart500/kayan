@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="app-container">
       <Head>
-        <title>Kayan</title>
+        <title>D.Shyaka</title>
       </Head>
       <div
         style={{
@@ -16,7 +16,7 @@ export default function Home() {
           fontSize: "1.2rem",
         }}
       >
-        <h1 style={{ margin: "0" }}>Kayan</h1>
+        <h1 style={{ margin: "0" }}>D.Shyaka</h1>
         <p>Coming soon....</p>
       </div>
     </div>

@@ -46,7 +46,7 @@ const App = ({ Component, pageProps }) => {
           <UserState>
             <Head>
               <link rel="icon" href="/favicon.ico" />
-              <title>Kayan</title>
+              <title>D.Shyaka</title>
             </Head>
             <CssBaseline />
             <Component {...pageProps} />

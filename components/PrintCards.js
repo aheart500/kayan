@@ -36,8 +36,8 @@ class PrintCards extends Component {
                       flexDirection: "column",
                     }}
                   >
-                    <h1 className="card-logo">KAYAN</h1>
-                    <p className="my-link">www.kayan.com</p>
+                    <h1 className="card-logo">D.Shyaka</h1>
+                    <p className="my-link">www.D.Shyaka.com</p>
                   </div>
                   <img src={QR} className="qr-code" />
                 </div>

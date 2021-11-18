@@ -35,11 +35,11 @@ export default function Home() {
           </div>
           <div className="links">
             <div style={{ width: "100%" }}>
-              <Link href="//www.kayan.com/">
+              <Link href="//www.D.Shyaka.com/">
                 <a className="link">
                   <div className="icon first-icon"></div>
                   <div className="data">
-                    <p className="header-p">Visit Kayan Online</p>
+                    <p className="header-p">Visit D.Shyaka Online</p>
                     <p className="subtitle-p">Coming soon...</p>
                   </div>
                 </a>
@@ -51,7 +51,7 @@ export default function Home() {
                   <div className="icon second-icon"></div>
                   <div className="data">
                     <p className="header-p">Facebook</p>
-                    <p className="subtitle-p">Become a fan for Kayan</p>
+                    <p className="subtitle-p">Become a fan for D.Shyaka</p>
                   </div>
                 </a>
               </Link>
@@ -62,7 +62,7 @@ export default function Home() {
                   <div className="icon third-icon"></div>
                   <div className="data">
                     <p className="header-p">Instagram</p>
-                    <p className="subtitle-p">Follow Kayan</p>
+                    <p className="subtitle-p">Follow D.Shyaka</p>
                   </div>
                 </a>
               </Link>
